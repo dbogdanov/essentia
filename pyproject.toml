@@ -25,11 +25,10 @@ environment = { PROJECT_NAME="essentia", ESSENTIA_PROJECT_NAME="${PROJECT_NAME}"
 
 before-all = [
   "brew install pkg-config gcc readline sqlite gdbm freetype libpng",
-  "brew install eigen libyaml fftw ffmpeg libsamplerate libtag tensorflow",
-  "PYBIN=/opt/python/cp36-cp36m/bin/",
-  "\"${PYBIN}/python\" waf configure --with-gaia --build-static --static-dependencies --pkg-config-path=\"${PKG_CONFIG_PATH}\"",
-  "\"${PYBIN}/python\" waf",
-  "\"${PYBIN}/python\" waf install"
+  "brew install eigen libyaml fftw ffmpeg@2.8 libsamplerate libtag chromaprint",
+  "python waf configure --with-gaia --build-static --static-dependencies --pkg-config-path=\"${PKG_CONFIG_PATH}\"",
+  "python waf",
+  "python waf install"
 ]
 
 test-command = "python -c 'import essentia; import essentia.standard; import essentia.streaming'"
