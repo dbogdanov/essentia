@@ -26,7 +26,7 @@ environment = { PROJECT_NAME="essentia", ESSENTIA_PROJECT_NAME="${PROJECT_NAME}"
 before-all = [
   "brew install pkg-config gcc readline sqlite gdbm freetype libpng",
   "brew install eigen libyaml fftw ffmpeg@2.8 libsamplerate libtag chromaprint",
-  "python waf configure --with-gaia --build-static --static-dependencies --pkg-config-path=\"${PKG_CONFIG_PATH}\"",
+  "python waf configure --pkg-config-path=\"${PKG_CONFIG_PATH}\"",
   "python waf",
   "python waf install"
 ]
