@@ -29,7 +29,7 @@ before-all = [
   "brew install pkg-config gcc readline sqlite gdbm freetype libpng",
   "brew install eigen libyaml fftw ffmpeg@2.8 libsamplerate libtag chromaprint",
   "brew tap MTG/essentia",
-  "brew install gaia",
+  "brew install gaia --HEAD",
   "python waf configure --with-gaia --pkg-config-path=\"${PKG_CONFIG_PATH}\"",
   "python waf",
   "python waf install"
