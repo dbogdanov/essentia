@@ -28,6 +28,7 @@ before-all = [
   "brew install pkg-config gcc readline sqlite gdbm freetype libpng",
   "brew install eigen libyaml fftw ffmpeg@2.8 libsamplerate libtag chromaprint",
   "brew install tensorflow",
+  "export PKG_CONFIG_PATH=\"/usr/local/opt/ffmpeg@2.8/lib/pkgconfig\"",
   #"brew tap MTG/essentia",
   #"brew install gaia --HEAD",
   "python waf configure --with-tensorflow --pkg-config-path=\"${PKG_CONFIG_PATH}\"",
