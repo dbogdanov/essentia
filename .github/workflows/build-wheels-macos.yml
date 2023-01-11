@@ -9,6 +9,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-11]
+        config: [pyproject-tensorflow.toml, pyproject.toml]
 
     steps:
       - uses: actions/checkout@v3
@@ -22,10 +23,8 @@ jobs:
         # env:
         #   CIBW_SOME_OPTION: value
         #    ...
-        # with:
-        #   package-dir: .
-        #   output-dir: wheelhouse
-        #   config-file: "{package}/pyproject.toml"
+        with:
+          config-file: ${{ matrix.config }}
 
       - uses: actions/upload-artifact@v3
         with:
