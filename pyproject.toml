@@ -35,5 +35,5 @@ before-all = [
   "python waf install"
 ]
 
-test-command = "python -c 'import essentia; import essentia.standard; import essentia.streaming'"
+test-command = "python -c 'import essentia; import essentia.standard; import essentia.streaming; from essentia.standard import MonoLoader, MetadataReader, YamlInput, Chromaprinter'"
 
